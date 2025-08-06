@@ -1,46 +1,32 @@
-import React from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import { ListTodo } from "lucide-react";
-import useAuth from "../hooks/AuthContext";
+import React from "react"
+import { Link, Outlet, useNavigate } from "react-router-dom"
+import { ListTodo } from 'lucide-react'
+import useAuth from "../hooks/AuthContext"
 
 export default function NavBar() {
-  const { user, clearAuth } = useAuth();
-  const navigate = useNavigate();
+  const { user, clearAuth } = useAuth()
+  const navigate = useNavigate()
 
   const handleLogout = () => {
-    clearAuth();
-    navigate("/");
-  };
+    clearAuth()
+    navigate("/") عايزاه يبقى responsive 
+  }
 
   return (
     <>
-      <nav
-        className="
-          flex flex-wrap justify-between items-center
-          px-4 py-4
-          bg-pink-100 rounded-3xl
-          mx-3 mt-3
-          sm:px-7 sm:py-5
-        "
-      >
-        <div className="flex items-center px-2">
-          <ListTodo size={24} className="text-rose-900" />
-          <Link
-            to="/"
-            className="text-rose-900 pl-2 font-bold text-lg sm:text-xl"
-          >
+      <nav className="flex justify-between px-7 py-5 rounded-4xl mt-3 mr-3 ml-3 items-center bg-pink-100">
+        <div className="flex px-4">
+          <ListTodo size={20} className="text-rose-900 mt-0.5" />
+          <Link to="/" className="text-rose-900 pl-2 font-bold">
             To Do List
           </Link>
         </div>
-
-        <ul
-        >
+        <ul>
           {!user && (
             <li>
               <Link
                 to="/login"
-              className="bg-rose-900 text-amber-50 px-4 py-2 rounded-4xl focus:outline-2 focus:outline-offset-2 focus:outline-rose-800 active:bg-rose-800"
-                
+                className="bg-rose-900 text-amber-50 px-4 py-2 rounded-4xl focus:outline-2 focus:outline-offset-2 focus:outline-rose-800 active:bg-rose-800"
               >
                 Login
               </Link>
@@ -50,8 +36,7 @@ export default function NavBar() {
             <li>
               <button
                 onClick={handleLogout}
-            className="bg-rose-900 text-amber-50 px-4 py-2 rounded-4xl focus:outline-2 focus:outline-offset-2 focus:outline-rose-800 active:bg-rose-800 cursor-pointer
-                "
+                className="bg-rose-900 text-amber-50 px-4 py-2 rounded-4xl focus:outline-2 focus:outline-offset-2 focus:outline-rose-800 active:bg-rose-800"
               >
                 Logout
               </button>
@@ -61,5 +46,5 @@ export default function NavBar() {
       </nav>
       <Outlet />
     </>
-  );
+  )
 }
