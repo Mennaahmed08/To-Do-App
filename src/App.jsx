@@ -12,7 +12,7 @@ export default function App() {
       <>
       <NavBar />
       <Routes>
-          <Route path="/To-Do-App/To-Do-App/" element={<LandingPage/>}/>
+          <Route path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route

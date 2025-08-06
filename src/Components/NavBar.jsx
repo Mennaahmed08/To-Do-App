@@ -8,7 +8,7 @@ export default function NavBar(){
     const navigate = useNavigate();
     const handleLogout = () => {
         clearAuth();
-        navigate("/To-Do-App/To-Do-App/");
+        navigate("/");
     };
     return(
         <>
