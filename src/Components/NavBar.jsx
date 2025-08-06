@@ -2,21 +2,20 @@ import React from "react"
 import { Link, Outlet, useNavigate } from "react-router-dom"
 import { ListTodo } from 'lucide-react';
 import useAuth from "../hooks/AuthContext";
-import LandingPage from "../Pages/LandingPage";
 
 export default function NavBar(){
     const { user, clearAuth} = useAuth();
     const navigate = useNavigate();
     const handleLogout = () => {
         clearAuth();
-        navigate(<LandingPage/>);
+        navigate("/");
     };
     return(
         <>
         <nav className="flex justify-between px-7 py-5 rounded-4xl mt-3 mr-3 ml-3 items-center bg-pink-100">
             <div className=" flex px-4">
                 <ListTodo size={20} className="text-rose-900 mt-0.5" />
-                <p className="text-rose-900 pl-2 font-bold">To Do List</p>
+                <Link to="/" className="text-rose-900 pl-2 font-bold">To Do List</Link>
             </div>
             <ul>
                 {!user && (
