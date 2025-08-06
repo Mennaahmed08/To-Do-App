@@ -13,6 +13,7 @@ export default function App() {
       <NavBar />
       <Routes>
         <LandingPage /> 
+        <Route path="/" element={<LandingPage/>}></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route
