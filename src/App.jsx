@@ -11,8 +11,8 @@ export default function App() {
     return (
       <>
       <NavBar />
-      <LandingPage />
       <Routes>
+          <Route path="/To-Do-App/" element={<LandingPage/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route
