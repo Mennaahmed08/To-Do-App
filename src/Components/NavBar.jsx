@@ -2,13 +2,14 @@ import React from "react"
 import { Link, Outlet, useNavigate } from "react-router-dom"
 import { ListTodo } from 'lucide-react';
 import useAuth from "../hooks/AuthContext";
+import LandingPage from "../Pages/LandingPage";
 
 export default function NavBar(){
     const { user, clearAuth} = useAuth();
     const navigate = useNavigate();
     const handleLogout = () => {
         clearAuth();
-        navigate("/");
+        navigate(<LandingPage/>);
     };
     return(
         <>
