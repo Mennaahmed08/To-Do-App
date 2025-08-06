@@ -34,27 +34,13 @@ export default function NavBar() {
         </div>
 
         <ul
-          className="
-            flex flex-wrap gap-3
-            mt-3
-            sm:mt-0
-            items-center
-          "
         >
           {!user && (
             <li>
               <Link
                 to="/login"
-                className="
-                  bg-rose-900 text-amber-50
-                  px-3 py-1.5
-                  rounded-3xl
-                  text-sm sm:text-base
-                  focus:outline-2 focus:outline-offset-2 focus:outline-rose-800
-                  active:bg-rose-800
-                  block
-                  sm:inline-block
-                "
+              className="bg-rose-900 text-amber-50 px-4 py-2 rounded-4xl focus:outline-2 focus:outline-offset-2 focus:outline-rose-800 active:bg-rose-800"
+                
               >
                 Login
               </Link>
@@ -64,16 +50,7 @@ export default function NavBar() {
             <li>
               <button
                 onClick={handleLogout}
-                className="
-                  bg-rose-900 text-amber-50
-                  px-3 py-1.5
-                  rounded-3xl
-                  text-sm sm:text-base
-                  focus:outline-2 focus:outline-offset-2 focus:outline-rose-800
-                  active:bg-rose-800
-                  block
-                  sm:inline-block
-                  cursor-pointer
+            className="bg-rose-900 text-amber-50 px-4 py-2 rounded-4xl focus:outline-2 focus:outline-offset-2 focus:outline-rose-800 active:bg-rose-800 cursor-pointer
                 "
               >
                 Logout
